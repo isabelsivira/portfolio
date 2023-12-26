@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: content-box;
+}
+
+.container{
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Silkscreen', sans-serif;
+font-family: 'Tsukimi Rounded', sans-serif;
+background-color: #fdc9da ;
+border-radius: 10px;
+padding: 8px;
+
+}
+
+/* Login page */
+
+#main {
+    margin: 0 auto;
+    margin-bottom: 96px;
+    margin-top: 32px;
+    box-sizing: content-box;
+}
+#login-main{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #e9edf6;
+}
+
+.wrapper {
+width: 420px;
+background-color: #fdc9da ;
+border-radius: 10px;
+padding: 30px 40px;
+}
+.wrapper h1 {
+ font-size: 36px;
+ text-align: center;
+}
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+border: 2px solid rgba(255, 255, 255, .2);
+border-radius: 40px;
+padding: 0px 0px 0px 10px;
+font-size: 16px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.submit-btn {
+width: 100%;
+height: 45px;
+border: none;
+outline: none;
+border-radius: 40px;
+box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+cursor: pointer;
+font-size: 16px;
+font-weight: 600;
+}
+
+.guest-btn {
+   font-size: 14.5px;
+   text-align: center;
+   margin-top: 20px; 
+}
+/* End of login page */
+
+.home-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }

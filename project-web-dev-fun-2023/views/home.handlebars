@@ -1,0 +1,23 @@
+<div class="home-flex">
+    <div class="home-image">
+        <img src="./img/isabel_avatar.png" 
+        width="450px"
+        alt="An illustration of me done with Picrew. 
+        In the picture I am sitting on a table with a fork and a knife o my hands eating a piece of cake. 
+        I have short red hair and I am waering a red hoodie, my glasses with black frames and black earrings.">
+    </div>
+    <div>
+   {{#if user}}
+   <h1>Good to have you back {{ user.username }}!</h1>
+   {{else}}
+   <h1>Hello! I am Isabel and welcome to my portfolio!</h1>
+   {{/if}}
+   </div>
+
+</div>
+<br>
+<footer>
+    <form action="/logout" method="POST">
+    <input class="btn btn-danger" type="submit" value="Log out">
+    </form>
+</footer>

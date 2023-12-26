@@ -1,0 +1,22 @@
+<div class="messages-container">
+    {{#each contact}}
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">New message!</h5>
+   <p>Name: {{cname}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Email: {{cemail}}</li>
+    <li class="list-group-item">Subject: {{csubject}}</li>
+    <li class="list-group-item">Message: {{cmessage}}</li>
+  </ul>
+  <div class="card-body">
+    {{#if ../isAdmin}}
+    <form action="/messages/delete/{{cid}}" method="post">
+ <button type="submit" class="btn btn-danger" >Delete</button>
+ </form>
+ {{/if}}
+  </div>
+</div>
+{{/each}}
+</div>

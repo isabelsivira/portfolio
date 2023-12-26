@@ -1,0 +1,36 @@
+<div id="series-main">
+    <h3>Series</h3>
+    {{#if isAdmin}}
+    <div>
+        <a href="/series/new" class="btn btn-info">New Series</a>
+    </div>
+    {{/if}}
+    <div class="container-series">
+        {{#if hasDatabaseError}}
+        <div>
+            Sorry, there was a problem with the database:<br />
+            {{theError}}
+        </div>
+        {{else}}
+        <div class="d-flex flex-row flex-wrap">
+            {{#each series}}
+            <div class="card m-2" style="width: 18rem;">
+                <a href="/series/update/{{sid}}"><img class="img-fluid" src="{{simgURL}}" alt="{{simgURL}}"></a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="/series/update/{{sid}}">{{sname}}</a>
+                    </h5>
+                    <p class="card-text">{{stype}} - {{sdesc}}</p>
+                    {{#if ../isAdmin}}
+                     <form action="/series/delete/{{sid}}" method="post"> 
+                     <button class="btn btn-outline-danger">Delete Series</button>
+                     </form>
+                    <a href="/series/update/{{sid}}" class="btn btn-primary">Update Series</a>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</div>

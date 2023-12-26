@@ -1,0 +1,39 @@
+<div class="contact-container">
+    <h3>Contact me</h3>
+    <div>
+        <form id="contactform" action="/contact" method="post">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Enter a message</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <label for="name">Your name:</label>
+                            <input type="text" class="form-control" name="name" id="name" required />
+                        </li>
+
+                        <li class="list-group-item">
+                            <label for="email">Your email:</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </li>
+
+                        <li class="list-group-item">
+                            <label for="subject">Subject:</label>
+                            <input type="text" class="form-control" name="subject" id="subject" required />
+                        </li>
+
+                        <li class="list-group-item">
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <input class="btn btn-outline-secondary" type="submit" value="Send">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<button class="btn btn-info"> <a href="/messages">Go to messages</a></button>
+

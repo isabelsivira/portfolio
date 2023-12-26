@@ -1,0 +1,34 @@
+<div id="projects-main">
+    <h3>Projects</h3>
+    {{#if isAdmin}}
+    <div>
+        <a href="/projects/new" class="btn">New project</a>
+    </div>
+    {{/if}}
+    <div class="container-projects">
+        {{#if hasDatabaseError}}
+        <div>
+            Sorry, there was a problem with the database:<br />
+            {{theError}}
+        </div>
+        {{else}}
+        <div class="d-flex flex-row flex-wrap">
+            {{#each projects}}
+            <div class="card m-2" style="width: 18rem;">
+                <a href="/projects/{{pid}}"><img class="img-fluid" src="{{pimgURL}}" alt="{{pimgURL}}"></a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="/projects/{{pid}}">{{pname}}</a>
+                    </h5>
+                    <p class="card-text">{{ptype}} - {{pyear}}</p>
+                    {{#if ../isAdmin}}
+                    <a href="/projects/update/{{pid}}" class="btn btn-primary">Update project</a>
+                    <a href="/projects/delete/{{pid}}" class="btn btn-outline-danger">Delete Project</a>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</div>

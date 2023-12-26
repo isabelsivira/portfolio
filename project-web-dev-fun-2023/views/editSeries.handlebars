@@ -1,0 +1,19 @@
+{{#if dbError}}
+  <p>Error: {{theError}}</p>
+{{/if}}
+<h3>Edit Series</h3>
+<form action="/series/update/{{series.sid}}" method="post">
+  <div class="form-group">
+    <label for="sname">Name:</label>
+    <input type="text" name="sname" id="sname" value="{{series.sname}}" required class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="stype">Type:</label>
+    <input type="text" name="stype" id="stype" value="{{series.stype}}" required class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="sdesc">Description:</label>
+    <textarea name="sdesc" id="sdesc" required class="form-control">{{series.sdesc}}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
